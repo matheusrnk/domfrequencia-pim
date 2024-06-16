@@ -43,7 +43,7 @@ img_back = np.abs(img_back)
 # Aplicar suavização espacial adicional
 img_back_smoothed = median_filter(img_back, size=3)  # ou outro filtro adequado
 
-# Realce de bordas pós-processamento (opcional)
+# Realce de bordas pós-processamento
 img_back_edges = cv2.Laplacian(img_back_smoothed, cv2.CV_64F)
 img_back_final = img_back_smoothed + img_back_edges * 50  # ajuste o peso conforme necessário
 

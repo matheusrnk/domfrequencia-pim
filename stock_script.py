@@ -11,7 +11,7 @@ dft = np.fft.fft2(img_reticulada)
 dft_shift = np.fft.fftshift(dft)
 
 # Visualizar o espectro de frequência
-magnitude_spectrum = 20 * np.log(np.abs(dft_shift))
+magnitude_spectrum = np.log(np.abs(dft_shift))
 
 plt.figure(figsize=(6, 6))
 plt.imshow(magnitude_spectrum, cmap='gray')
